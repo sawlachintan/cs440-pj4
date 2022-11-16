@@ -66,6 +66,74 @@ df.write.csv(sys.argv[2])
 ````
 to output the result.
 
+### Task 2
+
+Locate the Top 10 most active location ID and output it in the descending order of the activeness.<br/>
+An ID’s activeness is defined by the total number of drop off and pickup. In case of a tie, the lower
+locationID comes first.<br/>
+The output of your result CSV should have the following format (The number is just for illustration purpose). Put your Python code in a file called `main2.py`.
+
+#### Sample Output
+
+1
+<br />
+2
+<br />
+...
+
+#### Command
+
+We use a command similar to the [first task](#command), except that we now use `main2.py`.
+
+### Task 3
+
+List the top 3 days of the week with the largest number of daily average pick-ups and output it in the descending of the average pick-ups. Calculate the average pick-ups by taking an average of different dates falling in the same day of the weeks. For example, if you want to find the average pick-ups on Monday, you first find all the dates which are Monday. Then, you take an average of pick-ups of all those dates. In case of a tie, the lower day comes first (e.g., if there is a tie, Monday comes before Tuesday).<br/>
+The output of your result CSV should have the following format (The number is just for illustration purpose). Put your Python code in a file called `main3.py`. Write the day in full
+name (e.g., **Wednesday** not *Wed*)
+
+#### Sample Output
+
+Monday
+<br />
+Thursday
+<br />
+...
+
+#### Command
+
+We use a command similar to the [first task](#command), except that we now use `main3.py`.
+
+### Task 4
+
+For each hour of a day (00 to 23) — in the order from 00 to 23, find the zone in the Brooklyn borough with the largest number of total pick-ups (in case of a tie, pick the zone with the smallest alphabetical order). The map between location ID and borough, (and zone) could be found [here](https://drive.google.com/file/d/10MesoJtAl8bnF15awlrgs4Mjlb1HdnSs/view?usp=share_link).<br/>
+> Again, this is just a sample file. We may use different files for grading. So you should not hard code anything.
+
+The output of your result CSV should have the following format (The number is just for illustration purpose). Put your Python code in a file called `main4.py`.
+
+#### Sample Output
+
+00,Bay Bridge
+<br />
+01,Bay Bridge
+<br />
+...
+
+#### Command
+
+We will run your program using the following command (we grade the code in Linux):
+```bash
+./main4.py {input_data} {map_data} {output_directory}
+```
+The `input_data` (i.e., first argument of the command line) is the input data file your Python
+program should read from. The `map_data` (i.e., second argument of the command line) records
+the relationship between locationID, borough, and zone. The `output_directory` (i.e., third
+argument of the command line) is the name of the output directory (CSV) your Python program should write to. You should not hard code these files’ name. Rather, you should read it from the command line. Use the function similar to [task 1](#command) for output.
+
+For example, `./main4.py data.csv map.csv output4` means your Python program should
+read the data from `data.csv` and output the result to `output4`. The map information is in the file
+`map.csv`.
+
+
 ## Grading
 
 Each task is of 25% of the total grade of this project. We will compare your result CSV file with our result CSV file. If the two files are the same, you get full credit for this task, otherwise you get partial credits based on your result CSV file. We may use a different test data set, so you should not hard code anything (We will not change the schema though).
