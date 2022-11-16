@@ -44,11 +44,11 @@ Compute the total distance of all rides grouped by PULocationID *(equivalent to 
 
 #### Sample Output
 
+```
 1,100.00
-<br />
 2,100.00
-<br />
 ...
+```
 
 #### Command
 
@@ -75,11 +75,11 @@ The output of your result CSV should have the following format (The number is ju
 
 #### Sample Output
 
+```
 1
-<br />
 2
-<br />
 ...
+```
 
 #### Command
 
@@ -93,11 +93,11 @@ name (e.g., **Wednesday** not *Wed*)
 
 #### Sample Output
 
+```
 Monday
-<br />
 Thursday
-<br />
 ...
+```
 
 #### Command
 
@@ -112,11 +112,11 @@ The output of your result CSV should have the following format (The number is ju
 
 #### Sample Output
 
+```
 00,Bay Bridge
-<br />
 01,Bay Bridge
-<br />
 ...
+```
 
 #### Command
 
